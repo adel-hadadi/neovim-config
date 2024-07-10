@@ -1,3 +1,3 @@
 # My Neovim Config
 
-yeh just this
+yeh that's it
