@@ -9,4 +9,13 @@ return {
       })
     end,
   },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        lua_ls = {},
+        tsserrver = {},
+      },
+    },
+  },
 }

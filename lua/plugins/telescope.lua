@@ -3,7 +3,7 @@ return {
   keys = {
     -- add a keymap to browse plugin files
     {
-      "<leader>f",
+      "<C-f>",
       function()
         require("telescope.builtin").find_files()
       end,
@@ -19,4 +19,21 @@ return {
       winblend = 0,
     },
   },
+
+  config = function()
+    local actions = require("telescope.actions")
+    require("telescope").setup({
+      defaults = {
+        prompt_prefix = " ",
+        selection_caret = "  ",
+
+        mappings = {
+          i = {
+            ["<C-k>"] = actions.move_selection_previous,
+            ["<C-j>"] = actions.move_selection_next,
+          },
+        },
+      },
+    })
+  end,
 }
