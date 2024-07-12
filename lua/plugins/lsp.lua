@@ -11,11 +11,10 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        lua_ls = {},
-        tsserrver = {},
-      },
-    },
+    opts = function()
+      local keys = require("lazyvim.plugins.lsp.keymaps").get()
+
+      keys[#keys + 1] = { "gl", "<cmd>lua vim.diagnostic.open_float()<CR>" }
+    end,
   },
 }
