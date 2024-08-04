@@ -6,6 +6,7 @@ return {
         "stylua",
         "gopls",
         "golangci-lint-langserver",
+        "intelephense",
         "sqlls",
       })
     end,
